@@ -1,0 +1,202 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Themes */
+.clean {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.dark {
+    background: #333;
+    color: #ddd;
+}
+
+.white {
+    background: #fff;
+    color: #000;
+}
+
+.torn {
+    background: #2b0000;
+    color: #fff;
+}
+
+/* Paper styles */
+.paper {
+    width: 80%;
+    max-width: 600px;
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark .paper {
+    background: #2a2a2a;
+    color: #ccc;
+    border: 1px solid #444;
+}
+
+.white .paper {
+    background: #fff;
+    box-shadow: none;
+    border: 1px solid #eee;
+    color: #333;
+}
+
+.torn .paper {
+    background: #3e2723;
+    /* Clip path to look torn */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 90% 95%, 80% 85%, 70% 95%, 60% 85%, 50% 95%, 40% 85%, 30% 95%, 20% 85%, 10% 95%, 0 85%);
+    color: #ffcdd2;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.resultTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 2px solid currentColor;
+}
+
+.message {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* Yosegaki Area */
+.yosegakiArea {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 30px;
+    border: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+/* Notes (Mocking sticky notes) */
+.note1,
+.note2,
+.note3,
+.note4,
+.noteDark1,
+.noteDark2 {
+    position: absolute;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-family: 'Handwriting', cursive, sans-serif;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transform: rotate(-5deg);
+}
+
+.note1 {
+    top: 10px;
+    left: 10px;
+    background: #ffeb3b;
+    color: #333;
+}
+
+.note2 {
+    top: 20px;
+    right: 20px;
+    background: #81d4fa;
+    color: #333;
+    transform: rotate(5deg);
+}
+
+.note3 {
+    bottom: 30px;
+    left: 30px;
+    background: #a5d6a7;
+    color: #333;
+    transform: rotate(-10deg);
+}
+
+.note4 {
+    bottom: 10px;
+    right: 50px;
+    background: #ffcc80;
+    color: #333;
+    transform: rotate(3deg);
+}
+
+.noteDark1 {
+    top: 20px;
+    left: 20px;
+    background: #555;
+    color: #aaa;
+    transform: rotate(2deg);
+}
+
+.noteDark2 {
+    bottom: 20px;
+    right: 20px;
+    background: #444;
+    color: #999;
+    transform: rotate(-3deg);
+}
+
+.whiteText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    color: #aaa;
+}
+
+.tornText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ef9a9a;
+    font-style: italic;
+}
+
+/* Buttons */
+.shareButton {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+.shareButton:hover {
+    transform: scale(1.05);
+}
+
+.restartButton {
+    background: transparent;
+    border: 1px solid currentColor;
+    color: currentColor;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
